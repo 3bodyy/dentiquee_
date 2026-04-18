@@ -1,0 +1,148 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f5f7ff;
+  transition:0.3s;
+}
+
+/* DARK MODE */
+body.dark{
+  background:#0f0f1a;
+  color:white;
+}
+
+/* Header */
+.header{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 30px;
+  background:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+body.dark .header{
+  background:#1a1a2b;
+}
+
+nav a{
+  margin:0 10px;
+  text-decoration:none;
+  color:inherit;
+}
+
+/* Hero */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  padding:60px;
+}
+
+.hero-img{
+  width:350px;
+  border-radius:20px;
+}
+
+/* Buttons */
+.btn{
+  background:#3b5bff;
+  color:white;
+  padding:10px 15px;
+  border-radius:10px;
+  text-decoration:none;
+}
+
+.btn-outline{
+  border:2px solid #3b5bff;
+  padding:10px 15px;
+  border-radius:10px;
+  text-decoration:none;
+}
+
+/* Grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:15px;
+}
+
+/* Gallery */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:15px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* Contact */
+.contact a{
+  display:block;
+  margin:10px 0;
+}
+
+/* WhatsApp */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:green;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+  font-size:20px;
+}
+
+/* Lightbox */
+#lightbox{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+
+#lightbox img{
+  width:60%;
+  border-radius:15px;
+}
+
+/* Reveal animation */
+.reveal{
+  opacity:0;
+  transform:translateY(30px);
+  transition:0.6s;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
